@@ -1,0 +1,220 @@
+/* Saeawu Stylesheet - Revitalized Theme */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff8f0; /* Light background for freshness */
+  color: #000000; /* Default text color */
+}
+
+header {
+  background-color: #B22222; /* Bold Firebrick Red */
+  padding: 1rem;
+  color: #FFFFFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 200px;
+}
+
+nav.navbar {
+  background-color: #FFD700; /* Gold */
+  color: #000000;
+}
+
+.hamburger {
+  display: none; /* Hidden by default, shown on small screens */
+}
+
+.navbar.active {
+  display: flex !important;
+}
+
+nav.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav.navbar li a {
+  color: #000000;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  display: block;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+nav.navbar li a:hover {
+  background-color: #B22222; /* Dark Red */
+  color: #FFFFFF;
+}
+
+
+
+
+
+
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, #B22222, #FFD700);
+  color: #FFFFFF;
+  padding: 2rem;
+  align-items: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-banner {
+  flex: 1;
+  padding: 1rem;
+}
+
+.hero-video {
+  max-width: 100%;
+  height: auto;
+  border: 3px solid #FFD700;
+  border-radius: 8px;
+}
+
+.cta-button {
+  background-color: #FFD700;
+  color: #000000;
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #E6BE00;
+  color: #000;
+}
+
+.main-flex {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.main-content {
+  flex: 2;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: #000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+  flex: 1;
+  background-color: #fef6e4;
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: #000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li a {
+  color: #B22222;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sidebar input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border: 1px solid #FFD700;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #000000;
+}
+
+.search-icon {
+  color: #B22222;
+  margin-left: 0.5rem;
+}
+
+footer.footer {
+  background-color: #B22222;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+/* For tablets and below */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+
+  }
+
+  nav.navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav.navbar.active {
+    display: flex;
+  }
+
+  nav.navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-flex {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    order: 2;
+  }
+
+  .main-content {
+    order: 1;
+  }
+}
+
+/* For mobile-specific adjustments */
+@media (max-width: 480px) {
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo {
+    height: 120px; /* Optional: scale logo down for small screens */
+  }
+}

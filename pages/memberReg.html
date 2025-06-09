@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SAEAWU Membership Registration</title>
+   <link rel="stylesheet" href="./styles/styles.css">
+  <script defer>
+    function updateFee() {
+      const salary = parseFloat(document.getElementById("salary").value);
+      let fee = 75; // Base fee
+      if (salary && salary > 10000) {
+        fee = 100;
+      }
+      document.getElementById("feeDisplay").textContent = "Subscription Fee: R" + fee.toFixed(2);
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="header-flex">
+        <img src="images/logo.png" alt="SAEAWU Logo" width="200px" class="logo">
+      <h1>SAEAWU Membership</h1>
+    </div>
+  </header>
+
+  <section class="main-flex">
+    <div class="main-content">
+      <h2>Join SAEAWU</h2>
+      <p><strong>Confidential:</strong> Your information is collected and processed in accordance with the <a href="https://popia.co.za/" target="_blank">POPIA Act</a>.</p>
+
+      <form id="membershipForm">
+        <!-- Personal Info -->
+        <fieldset>
+          <legend>1. Personal Details</legend>
+          <label>Full Name:<input type="text" name="fullname" required /></label>
+          <label>Email:<input type="email" name="email" required /></label>
+          <label>Phone Number:<input type="tel" name="cell" required /></label>
+          <label>ID Number:<input type="text" name="idnumber" required /></label>
+          <label>Date of Birth:<input type="date" name="dob" required /></label>
+          <label>Gender:
+            <select name="gender" required>
+              <option value="">Select</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </label>
+        </fieldset>
+
+        <!-- Address -->
+        <fieldset>
+          <legend>2. Residential Address</legend>
+          <label>Street Address:<input type="text" name="streetAddress" required /></label>
+          <label>Suburb:<input type="text" name="suburb" required /></label>
+          <label>City/Town:<input type="text" name="city" required /></label>
+          <label>Province:
+            <select name="province" required>
+              <option value="">Select Province</option>
+              <option>Eastern Cape</option>
+              <option>Free State</option>
+              <option>Gauteng</option>
+              <option>KwaZulu-Natal</option>
+              <option>Limpopo</option>
+              <option>Mpumalanga</option>
+              <option>North West</option>
+              <option>Northern Cape</option>
+              <option>Western Cape</option>
+            </select>
+          </label>
+          <label>Postal Code:<input type="text" name="postalCode" pattern="\d{4}" required /></label>
+        </fieldset>
+
+        <!-- Employment -->
+        <fieldset>
+          <legend>3. Employment Details</legend>
+          <label>Employer Name:<input type="text" name="employer" required /></label>
+          <label>Job Title:<input type="text" name="job" required /></label>
+          <label>Monthly Gross Salary:<input type="number" id="salary" name="salary" onchange="updateFee()" required /></label>
+          <div id="feeDisplay" class="calculated-fee" style="margin-top: 0.5rem; font-weight: bold;">Subscription Fee: R75.00</div>
+        </fieldset>
+
+        <!-- Payment -->
+        <fieldset>
+          <legend>4. Select Payment Method</legend>
+          <label><input type="radio" name="payment" value="eft" required> EFT</label><br>
+          <label><input type="radio" name="payment" value="stoporder"> Stop Order</label><br>
+          <label><input type="radio" name="payment" value="debitorder"> Debit Order</label><br>
+          <label><input type="radio" name="payment" value="payfast"> PayFast (Online)</label>
+        </fieldset>
+
+        <!-- Agreement -->
+        <fieldset>
+          <legend>5. Consent & Declaration</legend>
+          <p>By submitting this form, you consent to the collection, processing, and storage of your personal data for administrative, compliance, and communication purposes in accordance with the <strong>Protection of Personal Information Act (POPIA), 2013</strong>.</p>
+          <label><input type="checkbox" required> I agree and confirm the above.</label>
+        </fieldset>
+
+        <!-- Submit -->
+        <div class="submit-btns" style="margin-top: 1.5rem;">
+          <button type="submit" class="cta-button">Submit Membership</button>
+          <a href="https://www.payfast.co.za/" class="cta-button" target="_blank">Pay Now via PayFast</a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Optional Sidebar -->
+    <aside class="sidebar">
+      <h3>Quick Info</h3>
+      <ul>
+        <li><a href="#">About SAEAWU</a></li>
+        <li><a href="#">Benefits</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+
+      <input type="text" placeholder="Search..." />
+    </aside>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 SAEAWU - All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

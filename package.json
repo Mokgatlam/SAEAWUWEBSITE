@@ -1,0 +1,23 @@
+{
+  "name": "saeawuwebsite",
+  "version": "1.0.0",
+  "description": "New SAEAWU-WEBSITE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mokgatlam/SAEAWUWEBSITE.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mokgatlam/SAEAWUWEBSITE/issues"
+  },
+  "homepage": "https://github.com/Mokgatlam/SAEAWUWEBSITE#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mysql": "^2.18.1"
+  }
+}

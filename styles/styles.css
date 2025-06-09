@@ -165,6 +165,59 @@ footer.footer {
 }
 
 
+/* Forms */
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form input[type="date"],
+form select,
+form input[type="search"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #004080;
+  outline: none;
+}
+
+fieldset {
+  margin-bottom: 25px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+legend {
+  font-weight: bold;
+  color: #004080;
+  padding: 0 10px;
+}
+
+/* Payment Radio Buttons */
+fieldset label input[type="radio"] {
+  margin-right: 8px;
+}
+
+/* Fee Display */
+.calculated-fee {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #006400;
+}
+
+
 
 
 /* For tablets and below */
